@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "DataBaseWebAPI.Controllers.DataBaseController",
+    "Method": "GetData",
+    "RelativePath": "api/DataBase/get-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
