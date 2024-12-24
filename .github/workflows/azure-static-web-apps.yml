@@ -20,6 +20,7 @@ jobs:
 
       - name: Build the application
         run: |
+          cd DataBaseWebAPI # Navigate to the directory containing the solution file
           dotnet restore
           dotnet build --configuration Release
 
