@@ -16,13 +16,14 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '8.0.x' # Adjust to your .NET Core version
+          dotnet-version: '8.0.x' # Ensuring .NET 8.0 SDK is used
 
       - name: Build the application
         run: |
           cd DataBaseWebAPI # Navigate to the directory containing the solution file
           dotnet restore
           dotnet build --configuration Release
+          dotnet publish -c Release -o output # Publish the application
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
