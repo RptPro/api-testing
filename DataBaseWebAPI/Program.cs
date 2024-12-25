@@ -13,13 +13,16 @@ namespace DataBaseWebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Configure CORS policy
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll", policy =>
-                {
-                    policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-                });
-            });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowJekyllSite", policy =>
+    {
+        policy.WithOrigins("https://rptpro.github.io")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 
 
             // Add services to the container
@@ -32,10 +35,16 @@ namespace DataBaseWebAPI
             builder.Host.UseWindowsService(); // Enable Windows Service
 
             var app = builder.Build();
-            app.UseCors(policy =>
-    policy.AllowAnyOrigin()
-          .AllowAnyMethod()
-          .AllowAnyHeader());
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowJekyllSite", policy =>
+    {
+        policy.WithOrigins("https://rptpro.github.io")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 
 
             // Configure the HTTP request pipeline
