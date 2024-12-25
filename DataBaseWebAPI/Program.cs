@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Hosting.WindowsServices;
 using System;
 
 namespace DataBaseWebAPI
@@ -28,7 +26,7 @@ namespace DataBaseWebAPI
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
 
-            // Enable Windows Service
+            // Enable Windows Service (Optional, for Windows deployment only)
             builder.Host.UseWindowsService();
 
             var app = builder.Build();
@@ -45,7 +43,7 @@ namespace DataBaseWebAPI
 
             app.UseCors("AllowJekyllSite"); // Apply CORS policy
 
-            // HTTPS redirection (can be omitted if using HTTP for testing)
+            // HTTPS redirection (can be omitted or customized if needed)
             if (app.Environment.IsDevelopment()) // Disable in production or modify if required
             {
                 app.UseHttpsRedirection();
@@ -54,8 +52,13 @@ namespace DataBaseWebAPI
             app.UseRouting();
             app.UseAuthorization();
 
-            // Map controllers
+            // Map controllers (ensure you have valid controllers)
             app.MapControllers();
+
+            // If you need default routing for a controller action, add it here
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Download}/{action=GenerateMultiAndDownloadMdb}/{id?}");
 
             // Run the application
             app.Run();
