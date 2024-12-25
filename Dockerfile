@@ -1,10 +1,10 @@
-# Use the official .NET image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Use the .NET 8.0 SDK image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
-# Use the SDK image to build the application
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["DataBaseWebAPI/DataBaseWebAPI.csproj", "DataBaseWebAPI/"]
 RUN dotnet restore "DataBaseWebAPI/DataBaseWebAPI.csproj"
@@ -13,9 +13,8 @@ WORKDIR "/src/DataBaseWebAPI"
 RUN dotnet build "DataBaseWebAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DataBaseWebAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "DataBaseWebAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-# Copy the build files to the final image
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
