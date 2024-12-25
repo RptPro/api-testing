@@ -48,7 +48,7 @@ namespace DataBaseWebAPI
             {
                 app.UseHttpsRedirection();
             }
-
+            app.MapGet("/", () => "Welcome to the API!");
             app.UseRouting();
             app.UseAuthorization();
 
