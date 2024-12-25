@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DataBaseWebAPI</RootNamespace>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <Platforms>AnyCPU</Platforms>  <!-- Changed to AnyCPU for compatibility -->
-  </PropertyGroup>
+<PropertyGroup>
+  <TargetFramework>net8.0</TargetFramework>
+  <OutputType>Exe</OutputType>
+  <RootNamespace>DataBaseWebAPI</RootNamespace>
+  <Nullable>enable</Nullable>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  <Platforms>AnyCPU</Platforms>  <!-- Changed to AnyCPU for compatibility -->
+</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
