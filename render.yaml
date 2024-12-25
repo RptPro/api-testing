@@ -1,13 +1,7 @@
 services:
   - type: web
-    name: database-api
-    env: dotnet
+    name: api-testing
+    env: asp.net
     plan: free
-    buildCommand: 'dotnet publish -c Release -o /app'
-    startCommand: 'dotnet /app/DataBaseWebAPI.dll'
-    branches:
-      production:
-        rootDirectory: .
-    autoDeploy: true
-    git:
-      branch: main
+    buildCommand: 'dotnet build'
+    startCommand: 'dotnet DataBaseWebAPI.dll'
