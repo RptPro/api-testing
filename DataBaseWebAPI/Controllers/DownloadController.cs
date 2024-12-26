@@ -51,7 +51,7 @@ public class DownloadController : Controller
         {
             // Log and return error response
             Console.WriteLine($"Error generating MDB file: {ex.Message}");
-            return StatusCode(500, "An error occurred while generating the MDB file.");
+            return StatusCode(500, $"An error occurred while generating the MDB file: {ex.Message}.");
         }
         finally
         {
