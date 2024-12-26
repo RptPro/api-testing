@@ -55,7 +55,7 @@ public class DownloadController : Controller
         }
         finally
         {
-            string duplicatePath = Path.Combine(_env.ContentRootPath, "DuplicatedDB", "DataBase.mdb");
+            string duplicatePath = Path.Combine("DuplicatedDB", "DataBase.mdb");
             CleanUpDuplicateFile(duplicatePath);
         }
     }
@@ -66,8 +66,8 @@ public class DownloadController : Controller
     {
         try
         {
-            string templatePath = Path.Combine(_env.ContentRootPath, "Template.mdb");
-            string duplicatePath = Path.Combine(_env.ContentRootPath, "DuplicatedDB", "DataBase.mdb");
+            string templatePath = "Template.mdb";
+            string duplicatePath = Path.Combine("DuplicatedDB", "DataBase.mdb");
 
             // Ensure the directory exists
             Directory.CreateDirectory(Path.GetDirectoryName(duplicatePath));
@@ -96,7 +96,7 @@ public class DownloadController : Controller
         }
         finally
         {
-            string duplicatePath = Path.Combine(_env.ContentRootPath, "DuplicatedDB", "DataBase.mdb");
+            string duplicatePath = Path.Combine("DuplicatedDB", "DataBase.mdb");
             if (System.IO.File.Exists(duplicatePath))
             {
                 System.IO.File.Delete(duplicatePath);
