@@ -26,7 +26,7 @@ public class DownloadController : Controller
         try
         {
             string templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Template.mdb");
-            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
+            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DataBase.mdb");
 
             // Ensure the directory exists
             Directory.CreateDirectory(Path.GetDirectoryName(duplicatePath));
@@ -69,7 +69,7 @@ public class DownloadController : Controller
         try
         {
             string templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Template.mdb");
-            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
+            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DataBase.mdb");
 
             // Ensure the directory exists
             Directory.CreateDirectory(Path.GetDirectoryName(duplicatePath));
