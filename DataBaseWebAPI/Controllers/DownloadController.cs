@@ -25,8 +25,8 @@ public class DownloadController : Controller
     {
         try
         {
-            string templatePath = Path.Combine(_env.ContentRootPath, "Template.mdb");
-            string duplicatePath = Path.Combine(_env.ContentRootPath, "DuplicatedDB", "DataBase.mdb");
+            string templatePath = "Template.mdb";
+            string duplicatePath = Path.Combine("DuplicatedDB", "DataBase.mdb");
 
             // Ensure the directory exists
             Directory.CreateDirectory(Path.GetDirectoryName(duplicatePath));
