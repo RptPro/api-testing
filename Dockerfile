@@ -1,7 +1,7 @@
 # Use the .NET 8.0 SDK image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-COPY ["DataBaseWebAPI/Template.mdb", "/app/Template.mdb"]
+COPY ["DataBaseWebAPI/Template.mdb", "/app/Template.mdb"
 EXPOSE 80
 EXPOSE 443
 
