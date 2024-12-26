@@ -49,9 +49,11 @@ public class DownloadController : Controller
         }
         catch (Exception ex)
         {
+            string[] files = Directory.GetFiles(Directory.GetCurrentDirectory());
+            string all = string.Join(",", files);
             // Log and return error response
             Console.WriteLine($"Error generating MDB file: {ex.Message}");
-            return StatusCode(500, $"Directory: {Directory.GetCurrentDirectory()}. An error occurred while generating the MDB file: {ex.Message}.");
+            return StatusCode(500, $"Directory: {all}. An error occurred while generating the MDB file: {ex.Message}.");
         }
         //finally
         //{
