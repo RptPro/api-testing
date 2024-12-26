@@ -51,13 +51,13 @@ public class DownloadController : Controller
         {
             // Log and return error response
             Console.WriteLine($"Error generating MDB file: {ex.Message}");
-            return StatusCode(500, $"Root: {_env.ContentRootPath}. An error occurred while generating the MDB file: {ex.Message}.");
+            return StatusCode(500, $"Directory: {Directory.GetCurrentDirectory()}. An error occurred while generating the MDB file: {ex.Message}.");
         }
-        finally
-        {
-            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
-            CleanUpDuplicateFile(duplicatePath);
-        }
+        //finally
+        //{
+        //    string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
+        //    CleanUpDuplicateFile(duplicatePath);
+        //}
     }
 
 
@@ -94,14 +94,14 @@ public class DownloadController : Controller
             Console.WriteLine($"Error generating MDB file: {ex.Message}");
             return StatusCode(500, "An error occurred while generating the MDB file.");
         }
-        finally
-        {
-            string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
-            if (System.IO.File.Exists(duplicatePath))
-            {
-                System.IO.File.Delete(duplicatePath);
-            }
-        }
+        //finally
+        //{
+        //    string duplicatePath = Path.Combine(Directory.GetCurrentDirectory(), "DuplicatedDB", "DataBase.mdb");
+        //    if (System.IO.File.Exists(duplicatePath))
+        //    {
+        //        System.IO.File.Delete(duplicatePath);
+        //    }
+        //}
     }
 
     public async Task InsertIntoDBAsync(string filePath, string firstName, string lastName)
