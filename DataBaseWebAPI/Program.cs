@@ -49,6 +49,7 @@ namespace DataBaseWebAPI
                 app.UseHttpsRedirection();
             }
             app.MapGet("/", () => "Welcome to the API!");
+            app.MapGet("/health", () => Results.Ok("Service is running"));
             app.UseRouting();
             app.UseAuthorization();
             app.UseStaticFiles();
