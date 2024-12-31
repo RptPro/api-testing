@@ -21,6 +21,6 @@ RUN dotnet publish "DataBaseWebAPI.csproj" -c Release -o /app/publish /p:UseAppH
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY DataBaseWebAPI/wwwroot/Template.mdb wwwroot/Template.mdb # Corrected path for Template.mdb
-COPY DataBaseWebAPI/wwwroot/UsersDB.mdb wwwroot/UsersDB.mdb # Corrected path for UsersDB.mdb
+COPY ["DataBaseWebAPI/wwwroot/Template.mdb", "/app/wwwroot/Template.mdb"]
+COPY ["DataBaseWebAPI/wwwroot/UsersDB.mdb", "/app/wwwroot/UsersDB.mdb"]
 ENTRYPOINT ["dotnet", "DataBaseWebAPI.dll"]
