@@ -27,8 +27,8 @@ WORKDIR /app
 
 # Copy the published application and database files
 COPY --from=publish /app/publish .
-COPY ["DataBaseWebAPI/wwwroot/Template.mdb", "/app/wwwroot/Template.mdb"]
-COPY ["DataBaseWebAPI/wwwroot/UsersDB.mdb", "/app/wwwroot/UsersDB.mdb"]
+#COPY ["DataBaseWebAPI/wwwroot/Template.mdb", "/app/wwwroot/Template.mdb"]
+#COPY ["DataBaseWebAPI/wwwroot/UsersDB.mdb", "/app/wwwroot/UsersDB.mdb"]
 
 # Set the entry point to run the application
 ENTRYPOINT ["dotnet", "DataBaseWebAPI.dll"]
