@@ -12,7 +12,7 @@ namespace DataBaseWebAPI.Controllers
         //public IActionResult GetData()
         //{
         //    return Ok("This is a test response from GetData.");
-        //}
+        //}//
         private readonly string connectionString = @"Driver={Microsoft Access Driver (*.mdb)};Dbq=" + Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UsersDB.mdb") + ";Uid=Admin;Pwd=;";
         [HttpGet("get-data")]
         public IActionResult GetData()
