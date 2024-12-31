@@ -17,7 +17,7 @@ WORKDIR /app
 COPY --from=publish /app/publish . 
 
 # Copy the Template.mdb file into the correct location
-COPY ["DataBaseWebAPI/Template.mdb", "/app/wwwroot/Template.mdb"]
+COPY ["DataBaseWebAPI/wwwroot/Template.mdb", "/app/wwwroot/Template.mdb"]
 
 EXPOSE 80
 EXPOSE 443
