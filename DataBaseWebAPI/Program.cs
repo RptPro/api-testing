@@ -51,6 +51,7 @@ namespace DataBaseWebAPI
             app.MapGet("/", () => "Welcome to the API!");
             app.UseRouting();
             app.UseAuthorization();
+            app.UseStaticFiles();
 
             // Map controllers (ensure you have valid controllers)
             app.MapControllers();
