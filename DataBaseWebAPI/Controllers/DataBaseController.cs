@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.Odbc;
+using System.IO;
 
 namespace DataBaseWebAPI.Controllers
 {
@@ -12,7 +13,7 @@ namespace DataBaseWebAPI.Controllers
         //{
         //    return Ok("This is a test response from GetData.");
         //}
-        private readonly string connectionString = @"Driver={Microsoft Access Driver (*.mdb)};Dbq=C:\Data\UsersDB.mdb;Uid=Admin;Pwd=;";
+        private readonly string connectionString = @"Driver={Microsoft Access Driver (*.mdb)};Dbq=" + Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "UsersDB.mdb") + ";Uid=Admin;Pwd=;";
         [HttpGet("get-data")]
         public IActionResult GetData()
         {
