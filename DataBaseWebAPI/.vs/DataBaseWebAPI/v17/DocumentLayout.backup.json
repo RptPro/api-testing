@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|c:\\users\\rapat\\source\\repos\\cwc_pdf_report_service\\api-testing\\databasewebapi\\controllers\\downloadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|solutionrelative:controllers\\downloadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|c:\\users\\rapat\\source\\repos\\cwc_pdf_report_service\\api-testing\\databasewebapi\\controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|solutionrelative:controllers\\databasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|c:\\users\\rapat\\source\\repos\\cwc_pdf_report_service\\api-testing\\databasewebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BE6278-0490-4556-B7D9-FA71E6EEA51E}|DataBaseWebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataBaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Controllers\\DataBaseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DataBaseController.cs",
+              "ToolTip": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Controllers\\DataBaseController.cs",
+              "RelativeToolTip": "Controllers\\DataBaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T08:29:42.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DownloadController.cs",
+              "DocumentMoniker": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Controllers\\DownloadController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DownloadController.cs",
+              "ToolTip": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Controllers\\DownloadController.cs",
+              "RelativeToolTip": "Controllers\\DownloadController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwEcAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T08:27:43.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Rapat\\source\\repos\\CWC_PDF_Report_Service\\api-testing\\DataBaseWebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwDUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T08:25:30.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
